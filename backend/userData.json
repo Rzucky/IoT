@@ -1,0 +1,32 @@
+{
+    "users":[
+        {
+            "username": "John",
+            "password": "6e0b7076126a29d5dfcbd54835387b7b",
+            "devices": [
+                {
+                    "name": "AC unit",
+                    "data": "asdadsasd"
+                },
+                {
+                    "name": "TV",
+                    "data": "kkjfgfds"
+                }
+            ]
+        },
+        {
+            "username": "Bob",
+            "password": "2acba7f51acfd4fd5102ad090fc612ee",
+            "devices": [
+                {
+                    "name": "AC unit",
+                    "data": "asdadsasd"
+                },
+                {
+                    "name": "Heating",
+                    "data": "abrakadabra"
+                }
+            ]
+        }
+    ]
+}
