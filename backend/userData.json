@@ -3,30 +3,28 @@
         {
             "username": "John",
             "password": "6e0b7076126a29d5dfcbd54835387b7b",
-            "accessToken": "K0Zjvt30ScVXwfImKJ1V",
             "devices": [
                 {
                     "name": "AC unit",
-                    "data": "asdadsasd"
+                    "data": "0xE0E040BF"
                 },
                 {
                     "name": "TV",
-                    "data": "kkjfgfds"
+                    "data": "0xA3E621DB"
                 }
             ]
         },
         {
             "username": "Bob",
             "password": "2acba7f51acfd4fd5102ad090fc612ee",
-            "accessToken": "K0Zjvt30ScVXwfImKJ1V",
             "devices": [
                 {
                     "name": "AC unit",
-                    "data": "asdadsasd"
+                    "data": "0xE0E040BF"
                 },
                 {
                     "name": "Heating",
-                    "data": "abrakadabra"
+                    "data": "0xB4A321AC"
                 }
             ]
         }
