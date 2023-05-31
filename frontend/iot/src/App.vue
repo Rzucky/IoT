@@ -67,7 +67,7 @@ export default {
           name: device_name,
           status
         })
-      const resp = await axios.post('http://localhost:3000/publish', 
+      const resp = await axios.post('https://iot-fer-backend.onrender.com/publish', 
         {
           user: this.user,
           name: device_name,
@@ -82,7 +82,7 @@ export default {
 
     async submitForm()
     {
-      const resp = await axios.post('http://localhost:3000/login', 
+      const resp = await axios.post('https://iot-fer-backend.onrender.com/login', 
         {
           username: this.username, 
           password: this.password
