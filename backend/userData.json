@@ -3,6 +3,7 @@
         {
             "username": "John",
             "password": "6e0b7076126a29d5dfcbd54835387b7b",
+            "accessToken": "K0Zjvt30ScVXwfImKJ1V",
             "devices": [
                 {
                     "name": "AC unit",
@@ -17,6 +18,7 @@
         {
             "username": "Bob",
             "password": "2acba7f51acfd4fd5102ad090fc612ee",
+            "accessToken": "K0Zjvt30ScVXwfImKJ1V",
             "devices": [
                 {
                     "name": "AC unit",

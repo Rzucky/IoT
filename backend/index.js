@@ -13,10 +13,6 @@ const usersJson = require('./userData.json');
 const mqtt = require('mqtt')
 
 
-const client  = mqtt.connect(`mqtt://${process.env.THINGHOST}`, {
-    username: process.env.TOKEN
-})
-
 app.post('/login', async (req, res) => {
   const { username, password } = req.body
   for (const user of usersJson.users)
@@ -41,12 +37,14 @@ app.post('/login', async (req, res) => {
 
 
 app.post('/publish', async (req, res) => {
-  const { user, name } = req.body
+  const { user, name, status } = req.body
   let val = ''
+  let userData = {};
   for (const u of usersJson.users)
   {
     if (u.username === user.name)
     {
+      userData = u;
       for (const dev of u.devices)
       { 
         if (dev.name === name)
@@ -56,12 +54,21 @@ app.post('/publish', async (req, res) => {
       }
     }
   }
-  
+  if (userData === {})
+  {
+    res.status(500).json({ message: 'user data error' });
+  }
+
   try
   {
-    await client.publish("v1/devices/me/telemetry", JSON.stringify({'code': val}));
+    const client  = await mqtt.connect(`mqtt://${process.env.THINGHOST}`, {
+      username: userData.accessToken
+    })
+
+    await client.publish("v1/devices/me/attributes", JSON.stringify({'device': name, status, 'code': val}));
     console.log('successfully sent publish data', val)
-  } 
+    await client.end()
+  }
   catch (error) 
   {
       res.status(500).json({ message: 'mqtt error' });  
